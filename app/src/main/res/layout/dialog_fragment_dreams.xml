@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contenedorPersonalizado2">
+    <ImageView
+        android:id="@+id/atras_dialog_D"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+        android:background="@drawable/arrow_back"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/containerConexion2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/text_conexion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/sin_internet1"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide" />
+
+        <ImageView
+            android:id="@+id/imagConex"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/icon_conexion_submarino"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_conexion1" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/containerLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_imagen_dialog"
+                android:elevation="2dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <ImageView
+                    android:id="@+id/imagen_dreams_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+                <ProgressBar
+                    android:id="@+id/imgTarProgress"
+                    android:layout_width="@dimen/progressBar_perfil"
+                    android:layout_height="@dimen/progressBar_perfil"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    android:elevation="3dp"
+                    android:layout_gravity="center"/>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/titulo_dreams_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/margin_titulo_T"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/titulo_dialog"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cant_like" />
+
+            <TextView
+                android:id="@+id/detalles_dreams_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/detalle_dialog"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/titulo_dreams_dialog"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ToggleButton
+                android:id="@+id/button_Like"
+                android:layout_width="@dimen/axh_like"
+                android:layout_height="@dimen/axh_like"
+                android:textOff=""
+                android:textOn=""
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/button_circle_off"
+                android:elevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagen"
+                app:layout_constraintBottom_toBottomOf="@+id/imagen"
+
+                />
+
+            <ImageView
+                android:layout_width="@dimen/axh_corazon"
+                android:layout_height="@dimen/axh_corazon"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ic_corazon"
+                android:elevation="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/button_Like"
+                app:layout_constraintEnd_toEndOf="@+id/button_Like"
+                app:layout_constraintStart_toStartOf="@+id/button_Like"
+                app:layout_constraintTop_toTopOf="@+id/button_Like" />
+
+            <TextView
+                android:id="@+id/cant_like"
+                android:layout_width="@dimen/axh_cant_like"
+                android:layout_height="@dimen/axh_cant_like"
+                android:layout_marginLeft="@dimen/margin_cant_like_L"
+                android:layout_marginTop="@dimen/margin_cant_like_T"
+                android:background="@drawable/button_circle_like"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:textColor="@color/primaryText"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/imagen" />
+
+            <FrameLayout
+                android:id="@+id/espacio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/button_Compartir"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detalles_dreams_dialog" />
+
+            <Button
+                android:id="@+id/button_Compartir"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/button_green"
+                android:drawableLeft="@drawable/ic_icon_compartir"
+                android:padding="15dp"
+                android:text="compartir"
+                android:textColor="@color/textIcons"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/espacio" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

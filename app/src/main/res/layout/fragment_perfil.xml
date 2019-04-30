@@ -1,0 +1,272 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="osorio.co.fundacionhuellas.FuncionalidadNavigation.PerfilFragment">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_water_mark_uno_no_opaco"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="166dp"
+        android:layout_height="215dp"
+        android:background="@drawable/logo_huellas"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="130dp"/>
+
+    <LinearLayout
+        android:id="@+id/msmConexion"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/rojo_r"
+        android:elevation="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Sin conexión"
+            android:textColor="@color/textIcons"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/fondo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            card_view:cardBackgroundColor="@color/fondoTransparente"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginTop="60dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvUsuario"
+                        android:layout_width="312dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/text_perfil"
+                        android:textStyle="bold"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputLayout_correo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="24dp"
+                        android:textColorHint="@color/colorPrimary"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/tvUsuario">
+
+                        <EditText
+                            android:id="@+id/tvEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:enabled="false"
+                            android:hint="Correo"
+                            android:singleLine="true"
+                            android:textSize="@dimen/editText_perfil" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputLayout_telefono"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:textColorHint="@color/colorPrimary"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/inputLayout_correo">
+
+                        <EditText
+                            android:id="@+id/tvTelefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Teléfono"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textSize="@dimen/editText_perfil" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputLayout_Direccion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColorHint="@color/colorPrimary"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/inputLayout_telefono">
+
+                        <EditText
+                            android:id="@+id/tvDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Dirección"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textSize="@dimen/editText_perfil" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/actualizarData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_green"
+                        android:elevation="8dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:text="Actualizar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textIcons"
+                        card_view:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+                        card_view:layout_constraintRight_toRightOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/inputLayout_Direccion" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayout2"
+                        android:layout_width="0dp"
+                        android:layout_height="18dp"
+                        card_view:layout_constraintBottom_toTopOf="@+id/cerrarSesion"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent" />
+
+                    <Button
+                        android:id="@+id/cerrarSesion"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_login_f"
+                        android:text="  Ingresar con Facebook"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textIcons"
+                        android:textSize="16dp"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintLeft_toLeftOf="parent"
+                        card_view:layout_constraintRight_toRightOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iconoFacebook"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/ic_icon_facebook"
+                        android:elevation="2dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cerrarSesion"
+                        app:layout_constraintLeft_toLeftOf="@+id/cerrarSesion"
+                        app:layout_constraintTop_toTopOf="@+id/cerrarSesion" />
+
+
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        card_view:layout_constraintGuide_percent="0.07" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            card_view:layout_constraintGuide_percent="0.15" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/axh_img_perfil"
+            android:layout_height="@dimen/axh_img_perfil"
+            android:src="@drawable/perfil"
+            android:elevation="16dp"
+            card_view:civ_border_color="@color/colorDivider"
+            card_view:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline3"
+            app:layout_constraintLeft_toLeftOf="@+id/fondo"
+            app:layout_constraintRight_toRightOf="@+id/fondo"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        <ProgressBar
+            android:elevation="3dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:id="@+id/imgProgressBar"
+            android:layout_width="@dimen/progressBar_perfil"
+            android:layout_height="@dimen/progressBar_perfil"
+            app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+            app:layout_constraintLeft_toLeftOf="@+id/imgProfile"
+            app:layout_constraintRight_toRightOf="@+id/imgProfile"
+            app:layout_constraintTop_toTopOf="@+id/imgProfile"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>

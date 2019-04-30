@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dimens para Intro Huellas -->
+    <dimen name="margin_intro_activity">16dp</dimen>
+    <dimen name="imag_height_intro">150dp</dimen>
+
+    <dimen name="titulo_intro">24sp</dimen>
+    <dimen name="descripcion_intro">18sp</dimen>
+
+    <!-- dimens para dialog -->
+    <dimen name="alto_imagen_dialog">250dp</dimen>
+    <dimen name="titulo_dialog">24sp</dimen>
+    <dimen name="detalle_dialog">16sp</dimen>
+    <dimen name="text_dialog">12sp</dimen>
+    <dimen name="margin_titulo_T">24dp</dimen>
+
+    <dimen name="axh_like">70dp</dimen>
+    <dimen name="axh_corazon">35dp</dimen>
+    <dimen name="axh_cant_like">40dp</dimen>
+    <dimen name="margin_cant_like_L">12dp</dimen>
+    <dimen name="margin_cant_like_T">4dp</dimen>
+
+    <!-- dimens para login -->
+    <dimen name="ancho_imagen_login">166dp</dimen>
+    <dimen name="alto_button_login">48dp</dimen>
+
+    <!-- dimens para perfil -->
+    <dimen name="axh_img_perfil">110dp</dimen>
+    <dimen name="progressBar_perfil">20dp</dimen>
+    <dimen name="text_perfil">18sp</dimen>
+    <dimen name="editText_perfil">14sp</dimen>
+
+    <!-- dimens para informacion -->
+    <dimen name="titulo_info">25sp</dimen>
+    <dimen name="text_info">16sp</dimen>
+    <dimen name="menuFlotante_text">12sp</dimen>
+    
+
+
+
+
+</resources>

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Funda Huellas</string>
+
+    <!-- Recursos para Intro Screen -->
+    <string name="boton_intro_continuar">CONTINUAR</string>
+    <string name="boton_intro_siguiente">SIGUIENTE</string>
+    <string name="slide_titulo1">Sueños</string>
+    <string name="slide_titulo2">Eventos</string>
+    <string name="slide_titulo3">Sueños Cumplidos</string>
+    <string name="slide_titulo4">Nosotros</string>
+    <string name="slide_1_sabiasque">Conoces los sueños de nuestros guerreritos y ayúdanos a cumplirlos</string>
+    <string name="slide_2_sabiasque">Mantente informado de nuestros eventos y convocatorias</string>
+    <string name="slide_3_sabiasque">Conoce los sueños hechos realidad de nuestros guerreritos</string>
+    <string name="slide_4_sabiasque">Conoce toda la información de nuestra organización</string>
+
+    <!-- Recursos para Conexion Internet -->
+    <string name="sin_internet1">Sin Conexión a Internet</string>
+    <string name="sin_internet2">Error de Conexión</string>
+    <string name="sin_internet_text1">Verifica la conexión Wi-Fi o de datos móviles</string>
+    <string name="sin_internet_text2">Compruebe la Conexión</string>
+
+
+    <!-- Recursos para LOGIN -->
+    <string name="facebook_app_id">******929456</string>
+    <string name="fb_login_protocol_scheme">******29456</string>
+    <string name="cancel_login">Inicio de sesión cancelado</string>
+    <string name="error_login">Error de conexión</string>
+
+    <!-- Recursos para NAVIGATION -->
+    <string name="title_aportes">Sueños</string>
+    <string name="title_sueños">Sonrisas</string>
+    <string name="title_informacion">Nosotros</string>
+    <string name="title_perfil">Perfil</string>
+
+    <!-- Recursos para INFORMACION_MAP -->
+    <string name="action_settings">Settings</string>
+    <string name="direccion">Calle 14 #18-18. Barrio Primero de Mayo</string>
+    <string name="ciudad">Neiva, (H) Colombia</string>
+    <string name="horario1">Lunes a Viernes de 3:00pm a 6:00pm</string>
+    <string name="horario2">Sábados y Domingos CERRADO</string>
+    <string name="telefonoFH">+57 ******878</string>
+
+    <!-- Recursos para INFORMACION_NOSOTROS -->
+    <string name="trabajo_social">trabajo social...................</string>
+    <string name="mision">la mision................</string>
+
+    <string name="dona_pato_id">fb://page/*****9378</string>
+    <string name="dona_pato_url">https://www....url</string>
+    <string name="smartgeeks_id">fb://page/****67955</string>
+    <string name="smartgeeks_url">https://www....url</string>
+    <string name="granadina_id">fb://page/*****6716875</string>
+    <string name="granadina_url">https://www....url</string>
+
+    <!-- Recursos para BASE DE DATOS -->
+    <string name="direccion_web">tu direccion webservice</string>
+    <string name="php_guardarUsuario">/guardarUsuario.php</string>
+    <string name="php_tar_finalizado">/listarTarjetasSuenosCumplidos.php?txtEstado=finalizado</string>
+    <string name="php_tar_pendiente">/listarTarjetasHome.php?txtEstado=pendiente</string>
+    <string name="direccion_imagen">tu direccion webservice/img/</string>
+
+    <string name="PHP_URL_COUNT">tu direccion webservice/countLikesTarjetas.php?txtCodigo=</string>
+    <string name="PHP_URL_VALIDAR">tu direccion webservice/validateLikeTarjeta.php</string>
+    <string name="PHP_URL_INSERT">tu direccion webservice/insertLikeTarjeta.php</string>
+    <string name="PHP_URL_DELETE">tu direccion webservice/deleteLikeTarjeta.php</string>
+
+
+    <!-- Recursos para dialog_fragmen_aportes -->
+    <string name="boton1">Quiero Ayudar</string>
+    <string name="boton2">Aporte Económico</string>
+    <string name="correoFHuellas">@hotmail.com</string>
+
+    <!-- Recursos para PERFIL -->
+
+
+    <!-- Recursos para informacion del usuario -->
+    <string name="name">Nombre</string>
+    <string name="email">Email</string>
+    <string name="phone">Teléfono</string>
+    <string name="address">Dirección</string>
+    <string name="credencial">credencial</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_aportes"
+        android:icon="@drawable/ic_nav_suenos"
+        android:title="@string/title_aportes" />
+
+    <item
+        android:id="@+id/navigation_dream"
+        android:icon="@drawable/ic_naveg_suenos_cumplidos"
+        android:title="@string/title_sueños" />
+
+    <item
+        android:id="@+id/navigation_informacion"
+        android:icon="@drawable/ic_naveg_nosotros"
+        android:title="@string/title_informacion" />
+
+    <item
+        android:id="@+id/navigation_perfil"
+        android:icon="@drawable/ic_naveg_perfil"
+        android:title="@string/title_perfil" />
+
+</menu>

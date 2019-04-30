@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#01579B</color>
+    <color name="colorPrimaryDark">#002F6C</color>
+    <color name="colorPrimaryLight">#0277bd</color>
+    <color name="colorAccent">#7BAC45</color>
+    <color name="colorAccentLight">#ACDE74</color>
+    <color name="colorAccentDark">#4B7C14</color>
+    <color name="colorDivider">#E8EAF6</color>
+
+    <color name="textIcons">#FFFFFF</color>
+    <color name="primaryText">#212121</color>
+    <color name="secundayText">#757575</color>
+
+    <color name="azulF">#0F67A2</color>
+    <color name="verdeF">#7BAC45</color>
+
+    <color name="fondoMenuFlotante">#edfffefe</color>
+    <color name="fondoTransparente">#f0fffefe</color>
+    <color name="pressedBlue">#e901579b</color>
+    <color name="pressedRed">#e9FD4B5C</color>
+    <color name="pressedAccent">#e97BAC45</color>
+    <color name="pressedRed500">#e9F44336</color>
+    <color name="pressedMap">#e9FFE047</color>
+    <color name="pressedTwitter">#e900aced</color>
+    <color name="WhatsApp">#25d366</color>
+    <color name="pressedWhatsApp">#e925d366</color>
+    <color name="pressedGreen700">#e900c853</color>
+    <color name="pressedLight">#e9E8EAF6</color>
+
+
+    <color name="trans">#aaffffff</color>
+    <color name="transp_play">#c9616161</color>
+
+    <color name="transp_atras1">#9adcdcdc</color>
+
+
+    <!--boton like -->
+    <color name="yellow_A700">#FFD600</color>
+    <color name="red_600">#E53935</color>}
+    <color name="gray">#E0E0E0</color>
+
+    <!--boton Registro -->
+    <color name="azul_f">#3B5998</color>
+    <color name="rojo_r">#FD4B5C</color>
+
+
+    <color name="amarillo_map">#FFE047</color>
+
+
+    <color name="indigo_500">#3F51B5</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="twitter">#00aced</color>
+
+    <color name="pink_500">#E91E63</color>
+    <color name="red_500">#F44336</color>
+    <color name="naranja_500">#FF5722</color>
+
+    <color name="purple_500">#9c27b0</color>
+    <color name="deep_purple_500">#673ab7</color>
+    <color name="verde_A700">#00c853</color>
+
+
+    <!-- colores de los puntos para la intro  Screen  -->
+    <color name="dot_dark_screen">#848484</color>
+    <color name="dot_light_screen">#D8D8D8</color>
+
+
+</resources>

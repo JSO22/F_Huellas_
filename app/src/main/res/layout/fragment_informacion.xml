@@ -1,0 +1,489 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="osorio.co.fundacionhuellas.FuncionalidadNavigation.InformacionFragment"
+    android:background="@color/colorDivider">
+
+
+    <LinearLayout
+        android:id="@+id/msmConexion"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/rojo_r"
+        android:elevation="4dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Sin conexión"
+            android:textColor="@color/textIcons"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <osorio.co.fundacionhuellas.myScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/informacionLayout"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/nosotrosLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/textIcons"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/trabajoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="NOSOTROS"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/titulo_info"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/descripcionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/trabajo_social"
+                    android:textColor="@color/secundayText"
+                    android:textSize="@dimen/text_info"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trabajoText" />
+
+                <FrameLayout
+                    android:id="@+id/video_frame"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descripcionText"
+                    android:elevation="5dp"
+                    android:background="@android:color/black">
+
+                    <ImageView
+                        android:id="@+id/portada_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:background="@drawable/portada_video"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"/>
+
+                    <VideoView
+                        android:id="@+id/video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/play"
+                        android:background="@drawable/play_video"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:elevation="5dp"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_video"
+                        android:indeterminate="true"
+                        android:layout_width="@dimen/progressBar_perfil"
+                        android:layout_height="@dimen/progressBar_perfil"
+                        android:elevation="5dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/misionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="MISIÓN"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/titulo_info"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/descripcionMision"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/video_frame" />
+
+                <TextView
+                    android:id="@+id/descripcionMision"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="64dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/mision"
+                    android:textColor="@color/secundayText"
+                    android:textSize="@dimen/text_info"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/misionText" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/mapLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/textIcons"
+                android:paddingTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nosotrosLayout">
+
+                <FrameLayout
+                    android:id="@+id/frame_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/maps"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp" />
+
+                    <View
+                        android:id="@+id/ventana"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@android:color/transparent" />
+
+                    <ImageButton
+                        android:id="@+id/busca_marca"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="right|top"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/trans"
+                        android:elevation="8dp"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/ic_marca" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frame_maps">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/T_Button_direccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:background="@drawable/button_blue"
+                            android:drawableLeft="@drawable/ic_posicion_24dp"
+                            android:drawablePadding="5dp"
+                            android:elevation="10dp"
+                            android:gravity="left|center"
+                            android:padding="10dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textIcons"
+                            android:textOff="Dirección"
+                            android:textOn="Dirección"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/flecha1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="4dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/ic_flecha_abajo_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/T_Button_direccion"
+                            app:layout_constraintRight_toRightOf="@id/T_Button_direccion"
+                            app:layout_constraintTop_toTopOf="@id/T_Button_direccion" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/direccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginRight="64dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/direccion"
+                        android:textColor="@color/primaryText"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/ciudad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginRight="64dp"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/ciudad"
+                        android:textColor="@color/secundayText"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_horario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linear_direccion">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ToggleButton
+                            android:id="@+id/T_Button_horario"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:background="@drawable/button_green"
+                            android:drawableLeft="@drawable/ic_reloj_24dp"
+                            android:drawablePadding="5dp"
+                            android:elevation="10dp"
+                            android:gravity="left|center"
+                            android:padding="10dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textIcons"
+                            android:textOff="Horarios"
+                            android:textOn="Horarios"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/flecha2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="4dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/ic_flecha_abajo_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/T_Button_horario"
+                            app:layout_constraintRight_toRightOf="@id/T_Button_horario"
+                            app:layout_constraintTop_toTopOf="@id/T_Button_horario" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/horarios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginRight="64dp"
+                        android:textColor="@color/primaryText"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/patrocinioLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/textIcons"
+                android:paddingTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapLayout">
+
+                <TextView
+                    android:id="@+id/agradecimientoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="AGRADECIMIENTOS A:"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="42dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agradecimientoText">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_patrocinio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </osorio.co.fundacionhuellas.myScrollView>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_flotante_informacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_fab_label="Síguenos"
+        app:menu_labels_textSize="@dimen/menuFlotante_text"
+        app:menu_labels_margin="16dp"
+        app:menu_backgroundColor="@color/fondoMenuFlotante"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/pressedAccent"
+        app:menu_icon="@drawable/ic_icon_info"
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Ubicación"
+            android:id="@+id/openMap"
+            android:src="@drawable/ic_icon_map"
+            app:fab_colorNormal="@color/amarillo_map"
+            app:fab_colorPressed="@color/pressedMap"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Facebook"
+            android:id="@+id/openFacebook"
+            android:src="@drawable/ic_icon_f"
+            app:fab_colorNormal="@color/com_facebook_blue"
+            app:fab_colorPressed="@color/pressedBlue"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Twitter"
+            android:id="@+id/openTwitter"
+            android:src="@drawable/ic_icon_twitter"
+            app:fab_colorNormal="@color/twitter"
+            app:fab_colorPressed="@color/pressedTwitter"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Instagram"
+            android:id="@+id/openInstagram"
+            android:src="@drawable/ic_icon_instagram"
+            app:fab_colorNormal="@color/deep_purple_500"
+            app:fab_colorPressed="@color/purple_500"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Correo"
+            android:id="@+id/openGmail"
+            android:src="@drawable/ic_icon_correo"
+            app:fab_colorNormal="@color/red_500"
+            app:fab_colorPressed="@color/pressedRed500"/>
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="WhatsApp"
+            android:id="@+id/openTelefono"
+            android:src="@drawable/ic_whatsapp"
+            app:fab_colorNormal="@color/WhatsApp"
+            app:fab_colorPressed="@color/pressedWhatsApp"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+</FrameLayout>
