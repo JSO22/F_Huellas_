@@ -1,4 +1,4 @@
-package osorio.co.fundacionhuellas;
+package osorio.co.fundacion;
 
 import android.annotation.TargetApi;
 import android.content.Context;
