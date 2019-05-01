@@ -1,4 +1,4 @@
-package osorio.co.fundacionhuellas.FuncionalidadSplashScreen;
+package osorio.co.fundacion.FuncionalidadSplashScreen;
 
 import android.content.Context;
 import android.content.SharedPreferences;
